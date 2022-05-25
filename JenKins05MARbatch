@@ -48,6 +48,7 @@ stage('DeployingApplicationToTomcat'){
 sshagent(['6dd33003-e23f-48c2-b4be-00cb8fe54345']) {
    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.126.88.229:/opt/apache-tomcat-9.0.62/webapps/"
 }
+}
 }//try_closing
 catch (e) {
     // If there was an exception thrown, the build failed
