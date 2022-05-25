@@ -58,4 +58,5 @@ catch (e) {
     // Success or failure, always send notifications
     SendSlackNotification(currentBuild.result)
   }
+}
 }//Node_closing
